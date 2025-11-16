@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Holo Demo</title>
+  <style>
+    html,body{height:100%;margin:0;background:black;display:flex;align-items:center;justify-content:center;}
+    .screen{width:100%;max-width:900px; position:relative;}
+    video{width:100%; height:auto; display:block;}
+    .note{position:fixed;bottom:10px;left:10px;color:#ddd;font-family:sans-serif;font-size:14px;}
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <video id="holo" src="holo.mp4" autoplay loop muted playsinline></video>
+  </div>
+  <div class="note">Coloque a pirâmide de acrílico no centro da tela.</div>
+
+  <script>
+    const v = document.getElementById('holo');
+    v.addEventListener('click', ()=> v.paused ? v.play() : v.pause());
+  </script>
+</body>
+</html>
